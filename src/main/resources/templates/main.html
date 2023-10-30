@@ -10,8 +10,9 @@
     <div class="logo">CNote</div>
     <div class="content-wrap">
         <div class="side-menu">
+            <div th:text="${targetPost.id}"></div>
             <ul>
-                <li th:each="post : ${postList}">
+                <li th:each="post : ${postList}" class="selected_item">
                     <a th:href="@{|/detail/${post.id}|}" th:text="${post.title}"></a>
                 </li>
             </ul>

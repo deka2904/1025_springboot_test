@@ -15,12 +15,6 @@ public class TestController {
     @Autowired
     private PostRepository postRepository;
 
-    @RequestMapping("/test")
-    @ResponseBody
-    public String test(){
-        return "test";
-    }
-
     @RequestMapping("/")
     public String main(Model model){
         List<Post> postList = this.postRepository.findAll();
