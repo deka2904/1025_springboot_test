@@ -17,11 +17,5 @@ class SpringBootWebExApplicationTests {
 		p.setContent("bbb");
 		p.setCreateDate(LocalDateTime.now());
 		this.postRepository.save(p);
-
-		Post p1 = new Post();
-		p1.setTitle("ccc");
-		p1.setContent("ddd");
-		p1.setCreateDate(LocalDateTime.now());
-		this.postRepository.save(p1);
 	}
 }

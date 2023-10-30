@@ -24,6 +24,11 @@ public class TestController {
     @RequestMapping("/")
     public String main(Model model){
         List<Post> postList = this.postRepository.findAll();
+        if(postList.isEmpty()){
+            saveDefault();
+            return "redirect:/";
+        }
+
         model.addAttribute("postList", postList);
         model.addAttribute("targetPost", postList.get(0));
         return "main";
@@ -31,12 +36,7 @@ public class TestController {
 
     @PostMapping("/write")
     public String write(){
-        Post post = new Post();
-        post.setTitle("new_title");
-        post.setContent("new_content");
-        post.setCreateDate(LocalDateTime.now());
-        this.postRepository.save(post);
-
+        saveDefault();
         return "redirect:/";
     }
 
@@ -55,5 +55,13 @@ public class TestController {
         post.setContent(content);
         this.postRepository.save(post);
         return "redirect:/detail/" + id;
+    }
+
+    private void saveDefault() {
+        Post post = new Post();
+        post.setTitle("new_title");
+        post.setContent("new_content");
+        post.setCreateDate(LocalDateTime.now());
+        this.postRepository.save(post);
     }
 }

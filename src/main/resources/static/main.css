@@ -9,11 +9,16 @@ a{
 }
 
 .wrap {
-    background : red;
+    background : #0F0F47;
 }
 
 .logo {
-    background : aqua;
+    background : #0F0F47;
+    border-bottom : 2px solid white;
+    color : white;
+    font-size: medium;
+    font-weight: bold;
+    padding : 15px;
 }
 
 .content-wrap {
@@ -21,14 +26,15 @@ a{
 }
 
 .side-menu {
-    background : yellow;
+    background : #0F0F47;
     text-align : center;
+    color : white;
     width : 10%;
-    height : 800px;
+    height : 1000px;
 }
 
 .content {
-    background : green;
+    background : white;
     width : 90%;
-    height : 800px;
+    height : 1000px;
 }
