@@ -9,11 +9,11 @@ a{
 }
 
 .wrap {
-    background : #0F0F47;
+    background : #1E3269;
 }
 
 .logo {
-    background : #0F0F47;
+    background : #1E3269;
     border-bottom : 2px solid white;
     color : white;
     font-size: medium;
@@ -26,7 +26,7 @@ a{
 }
 
 .side-menu {
-    background : #0F0F47;
+    background : #1E3269;
     text-align : center;
     color : white;
     width : 10%;

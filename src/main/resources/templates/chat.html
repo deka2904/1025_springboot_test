@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body, ul, li{
+          margin:0;
+          list-style:none;
+          padding:0;
+        }
+        a{
+          text-decoration:none;
+          color:inherit;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <form action="">
-
-        </form>
-    </div>
+<div>
+    <form action="/chatbot" method="post">
+        <input type="text" name="query">
+        <input type="submit" value="전송">
+    </form>
+</div>
+<div th:if="${result_list != null}">
+    <ul>
+        <li th:each="result : ${result_list}" th:text="${result}"></li>
+    </ul>
+</div>
 </body>
 </html>
